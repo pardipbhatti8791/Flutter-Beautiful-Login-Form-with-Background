@@ -54,20 +54,20 @@ class LoginPageState extends State<LoginPage>
           new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              new FlutterLogo(size: _iconAnimation.value * 100),
-              // new Image(
-              //   image: new NetworkImage("https://gpcoders.com/wp-content/uploads/2018/02/gpcoders_logo.png"),
-              //   width: 200.0,
-              // ),
+              // new FlutterLogo(size: _iconAnimation.value * 100),
+              new Image(
+                image: new NetworkImage("https://gpcoders.com/wp-content/uploads/2018/02/gpcoders_logo.png"),
+                width: 200.0,
+              ),
              
               new Form(
                   child: new Theme(
                     data: new ThemeData(
                       brightness: Brightness.dark,
-                      primarySwatch: Colors.green,
+                      primarySwatch: Colors.red,
                       inputDecorationTheme: new InputDecorationTheme(
                         labelStyle: new TextStyle(
-                          color: Colors.greenAccent,
+                          color: Colors.redAccent,
                           fontSize: 16.0
                         )
                       )
@@ -80,7 +80,7 @@ class LoginPageState extends State<LoginPage>
                           new Padding(
                             padding: const EdgeInsets.only(left: 50.0, right: 50.0, bottom: 8.0),
                             child: new TextField(
-                              decoration: new InputDecoration(labelText: "Enter Email", suffixIcon: new Icon(Icons.person) ),
+                              decoration: new InputDecoration(labelText: "Enter Email", suffixIcon: new Icon(Icons.person, color: Colors.redAccent,) ),
                               keyboardType: TextInputType.emailAddress,
                               autocorrect: false,
                             ),
@@ -89,7 +89,7 @@ class LoginPageState extends State<LoginPage>
                             padding: const EdgeInsets.only(left: 50.0, right: 50.0, bottom: 20.0),
                             child: new TextField(
                               decoration:
-                                  new InputDecoration(labelText: "Enter Password", suffixIcon: new Icon(Icons.lock)),
+                                  new InputDecoration(labelText: "Enter Password", suffixIcon: new Icon(Icons.lock, color: Colors.redAccent,)),
                               keyboardType: TextInputType.text,
                               obscureText: true,
                             ),
@@ -99,7 +99,7 @@ class LoginPageState extends State<LoginPage>
                             child: new MaterialButton(
                               height: 40.0,
                               minWidth: 100.0,
-                              color: Colors.greenAccent,
+                              color: Colors.redAccent,
                               textColor: Colors.white,
                               child: new Text("Login"),
                               onPressed: () => setState(() {
